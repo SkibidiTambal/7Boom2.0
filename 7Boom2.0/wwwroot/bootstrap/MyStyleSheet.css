@@ -3,6 +3,7 @@
 }
 
 image {
+    border-radius :revert;
 }
 
 table {
@@ -14,7 +15,7 @@ table {
 
 th, td {
     padding: 10px;
-    border: 1px solid groove;
+    border: 5px solid groove;
     font-weight: bold;
 }
 
