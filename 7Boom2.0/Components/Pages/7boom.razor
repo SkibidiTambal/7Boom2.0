@@ -1,0 +1,58 @@
+﻿@page "/7boom"
+<h3>_7boom</h3>
+
+<link rel="stylesheet" href="MyStyleSheet.css">
+<img src="bootstrap/7Boom_Supertanker_Mobile_znsysm.jpg" alt="sorry dude"/>
+
+
+
+@if (results != null)
+{
+    <div>
+        @foreach (var result in results)
+        {
+            <span>@result</span>
+            <span> </span>
+        }
+    </div>
+}
+
+@code {
+    protected override void OnInitialized()
+    {
+        PlaySevenBoom();
+    }
+
+    private string[]? results;
+
+    private void PlaySevenBoom()
+    {
+
+        results = new string[100];
+
+
+        for (int i = 1; i <= 100; i++)
+        {
+
+
+            if (IsBoom(i))
+            {
+                results[i - 1] = "Boom!";
+            }
+            else
+            {
+                results[i - 1] = i.ToString();
+            }
+
+
+
+        }
+    }
+
+
+    private bool IsBoom(int number)
+    {
+
+        return number % 7 == 0 || number.ToString().Contains("7");
+    }
+}

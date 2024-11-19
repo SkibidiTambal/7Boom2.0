@@ -1,0 +1,28 @@
+﻿body {
+    background-color: aquamarine
+}
+
+image {
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid groove;
+    font-weight: bold;
+}
+
+thead th {
+    background-color: rebeccapurple;
+    color: darkred;
+}
+
+tbody th {
+    background-color: lightseagreen;
+}
